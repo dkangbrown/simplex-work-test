@@ -1,0 +1,14 @@
+name: 2component_nonergodic
+instance:
+  _target_: fwh_core.generative_processes.builder.build_nonergodic_hidden_markov_model
+  process_names: ["mess3", "mess3"]
+  process_params: [{"x": 0.15, "a": 0.6}, {"x": 0.5, "a": 0.6}]
+  process_weights: [0.5, 0.5]
+  vocab_maps: [None, None]
+  add_bos_token: false
+  device: ${device}
+
+base_vocab_size: ???
+vocab_size: ???
+bos_token: ???
+eos_token: null

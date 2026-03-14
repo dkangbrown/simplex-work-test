@@ -1,0 +1,4 @@
+instance:
+  _target_: fwh_core.logging.file_logger.FileLogger
+  file_path: ${hydra:runtime.output_dir}/train.log
+
