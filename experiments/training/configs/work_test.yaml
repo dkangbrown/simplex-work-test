@@ -1,11 +1,11 @@
 defaults:
   - training: reproducibility
   - predictive_model: transformer_small
-  - generative_process: 2mess3_nonergodic
+  - generative_process: 2mess3_nonergodic_1
   - metric_tracker@training_metric_tracker: full
   - metric_tracker@eval_metric_tracker: loss_only
   - activation_tracker: simple_tracker
-  - logging: print_logger
+  - logging: file_logger
   - persistence: local_pytorch
   - optimizer: pytorch_adam
   - lr_scheduler: windowed_plateau
@@ -35,7 +35,3 @@ visualization:
   belief_regression:
     enabled: true
     max_samples: 10000
-
-hydra:
-  run:
-    dir: /nas/ucb/daniel_d_kang/simplex-work-test/runs/${experiment_name}/${run_name}/${now:%Y-%m-%d_%H-%M-%S}

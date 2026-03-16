@@ -9,7 +9,7 @@ instance:
     n_layers: 2
     n_ctx: 9
     d_mlp: 480
-    d_vocab: ???
+    d_vocab: 4
     act_fn: "relu"
     normalization_type: "LN"
     device: ${device}
